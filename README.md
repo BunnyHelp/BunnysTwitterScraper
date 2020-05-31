@@ -77,3 +77,5 @@ Download JSON metadata, like what youtube-dl does, and make that all nice and ne
 If the original tweet author replies to their own tweet (and starts a chain of follow-up statements), automagically get all of those, and put them together in a nice way
 
 The ability to get all of (or at least the most recent) of one user's posts would be good
+
+Add the ability to get Instagram, Facebook and Youtube posts in the same way
