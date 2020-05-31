@@ -35,12 +35,14 @@ To install the needed Python modules:
 In the Windows command prompt, you can type `pip install youtube-dl`, `pip install tweepy`, `pip install tld`, `pip install wget`
 
 
-#HOW TO RUN
-Remove the default text in the `URLs.txt` file. Paste in tweet URLs with or without the `?s=20`. There must be one URL per line. An example of a valid URL would be `https://twitter.com/CrackerBarrel/status/1265628864119701504` or `https://twitter.com/CrackerBarrel/status/1265628864119701504?s=20`.
+# HOW TO RUN
+Remove the default text in the `URLs.txt` file. Paste in tweet URLs with or without the `?s=20`. There must be one URL per line, with up to as many lines as you want. An example of a valid URL would be `https://twitter.com/CrackerBarrel/status/1265628864119701504` or `https://twitter.com/CrackerBarrel/status/1265628864119701504?s=20`.
+
 Make sure you save this URLs.txt file before using the .py or .bat file.
 
 For me, doubleclicking on the .py file doesn't work, and I have no gosh dang idea why. To circumvent this, I've included the run.bat file. Doubleclicking that file should run the Scraper.py (assuming python.exe is in Window's PATH)
 
+If you really want to monitor and mess with this program, I recommend loading the project into PyCharm.
 
 
 If you're still having troubles after reading all of that, use problem solving skills, or create an issue or something.
