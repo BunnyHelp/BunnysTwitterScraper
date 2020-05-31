@@ -57,3 +57,21 @@ If you really want to monitor and mess with this program, I recommend loading th
 If you're still having troubles after reading all of that, use problem solving skills, or create an issue or something.
 
 Suggestions on improvements are very much welcome. Happy hoarding!
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Things to Do
+
+Download JSON metadata, like what youtube-dl does, and make that all nice and neat.
+
+If the original tweet author replies to their own tweet (and starts a chain of follow-up statements), automagically get all of those, and put them together in a nice way
