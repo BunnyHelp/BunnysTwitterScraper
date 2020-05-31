@@ -3,6 +3,12 @@
 Hello there, this is my first real "program". I don't entirely know what I'm doing. I've been mostly a script kiddy (minus the hacking part), but in light of recent events, I decided to make this in order to archive tweets about the protesting.
 
 
+This will download the Tweet's text, the person's Twitter handle, screen name, what they tweeted from, where they tweeted from (if available), and the tweet's current likes and retweets. Getting the number of replies requires a premium API key (which costs $$$)
+
+If there is a photo or video attached to the tweet, youtube-dl downloads the video, and the Twitter API & wget get the photos.
+
+The .js file, powered by Node.js and Puppeteer, opens a headless browser to get a screenshot of the tweet.
+
 This is currently what I would call a beta. It's a 2005 Toyota Corolla with a manual transmission.
 It works, but it's not exactly attractive, and setup could be a pain.
 
