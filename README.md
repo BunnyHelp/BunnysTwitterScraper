@@ -56,4 +56,4 @@ If you really want to monitor and mess with this program, I recommend loading th
 
 If you're still having troubles after reading all of that, use problem solving skills, or create an issue or something.
 
-Happy hoarding!
+Suggestions on improvements are very much welcome. Happy hoarding!
