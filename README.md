@@ -11,6 +11,7 @@ It works, but it's not exactly attractive, and setup could be a pain.
 This is intended for Windows. I have no clue how it will work on other platforms. It probably won't.
 
 If you don't have a Twitter developer account / API keys, you'll need to sign up for one at https://developer.twitter.com/en/apply-for-access in order to access the API, which you need to use this program. Once you have your account, create an app (I dont think good app names and descriptions are critical), and you should have gotten a couple API keys. Hooray! 
+
 EDIT THESE API KEYS INTO THE EMPTY STRINGS IN THE .py FILE.
 
 If you don't have the needed modules, I REALLY recommend installing pip if you haven't already https://pip.pypa.io/en/stable/installing/
