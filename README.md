@@ -33,7 +33,7 @@ You will need:
 
 Python (duh, the main file is a .py file) - https://www.python.org/downloads/ - I've been using it with version 3.8, but it should maybe hopefully probably work with older-ish versions.
 
-Node.js - https://nodejs.org/en/download/  - Juse use the Windows Installer. If you've already installed it, I hope you have a node.exe file in the directory C:\Program Files\nodejs\ AND MAKE SURE THIS IS IN WINDOWS'S PATH. I'm not sure if it comes default with the installation - instructions on how to do that are here: https://www.youtube.com/watch?v=pYvL6e4NDv4
+Node.js - https://nodejs.org/en/download/  - Just use the Windows Installer. If you've already installed it, I hope you have a node.exe file in the directory C:\Program Files\nodejs\ AND MAKE SURE THIS IS IN WINDOWS'S PATH. I'm not sure if it comes default with the installation - instructions on how to do that are here: https://www.youtube.com/watch?v=pYvL6e4NDv4
 
 
 Puppeteer - https://github.com/puppeteer/puppeteer - command to install is `npm i puppeteer` in the windows CMD (once Node.js is installed and put into Windows's PATH)
