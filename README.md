@@ -37,7 +37,7 @@ Node.js - https://nodejs.org/en/download/  - Juse use the Windows Installer. If 
 
 
 Puppeteer - https://github.com/puppeteer/puppeteer - command to install is `npm i puppeteer` in the windows CMD (once Node.js is installed and put into Windows's PATH)
-
+Note: I think there is a small memory leak issue with puppeteer, so you may want to restart your PC after downloading a few hundred tweets
 
 To install the needed Python modules:
 
