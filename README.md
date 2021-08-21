@@ -1,47 +1,31 @@
 # BunnysTwitterScraper
 
-Hello there, this is my first real "program". I don't entirely know what I'm doing. I've been mostly a script kiddy (minus the hacking part), but in light of recent events, I decided to make this in order to archive tweets about the protesting.
-
-
-This will download the Tweet's text, the person's Twitter handle, screen name, what they tweeted from, where they tweeted from (if available), and the tweet's current likes and retweets. Getting the number of replies requires a premium API key (which costs $$$)
+This will download a Tweet's text, the person's Twitter handle, screen name, what they tweeted from, where they tweeted from (if available), and the tweet's current likes and retweets. Getting the number of replies requires a premium API key (which costs $$$)
 
 If there is a photo or video attached to the tweet, youtube-dl downloads the video, and the Twitter API & wget get the photos.
 
-The .js file, powered by Node.js and Puppeteer, opens a headless browser to get a screenshot of the tweet.
-
-This is currently what I would call a beta. It's a 2005 Toyota Corolla with a manual transmission.
-It works, but it's not exactly attractive, and setup could be a pain.
+Pypeteer opens an internal headless browser, to get a screenshot of the page.
 
 
 # REQUIREMENTS
-This is intended for Windows. I have no clue how it will work on other platforms. It probably won't.
+This is intended for Windows. Good luck with other platforms.
 
-If you don't have a Twitter developer account / API keys, you'll need to sign up for one at https://developer.twitter.com/en/apply-for-access in order to access the API, which you need to use this program. Once you have your account, create an app (I dont think good app names and descriptions are critical), and you should have gotten a couple API keys. Hooray! 
+If you don't have a Twitter developer account / API keys, you'll need to sign up for one at https://developer.twitter.com/en/apply-for-access in order to access the API, which you need to use this program. Once you have your account, create an app (you don't need to be super serious), and you should have gotten a couple API keys. Hooray! 
 
 EDIT THESE API KEYS INTO THE EMPTY STRINGS IN THE .py FILE.
 
-If you don't have the needed modules, I REALLY recommend installing pip if you haven't already https://pip.pypa.io/en/stable/installing/
-
-
 
 # INSTALLATION
-Download this repository as a zip file, and put the files into your desired place of download.
 
 What's a setup.py file? I don't know. So here's how you set this up.
 
-You will need:
+Get Pip if you don't have it already, it will make your life easier https://pip.pypa.io/en/stable/installing/
 
-Python (duh, the main file is a .py file) - https://www.python.org/downloads/ - I've been using it with version 3.8, but it should maybe hopefully probably work with older-ish versions.
+Download this repository as a zip file, and put the files into your desired place of download.
 
-Node.js - https://nodejs.org/en/download/  - Just use the Windows Installer. If you've already installed it, I hope you have a node.exe file in the directory C:\Program Files\nodejs\ AND MAKE SURE THIS IS IN WINDOWS'S PATH. I'm not sure if it comes default with the installation - instructions on how to do that are here: https://www.youtube.com/watch?v=pYvL6e4NDv4
+You will need Python (duh, the main file is a .py file) - https://www.python.org/downloads/ - I've been using it with version 3.8, but it should maybe hopefully probably work with older-ish versions.
 
-
-Puppeteer - https://github.com/puppeteer/puppeteer - command to install is `npm i puppeteer` in the windows CMD (once Node.js is installed and put into Windows's PATH)
-Note: I think there is a small memory leak issue with puppeteer, so you may want to restart your PC after downloading a few hundred tweets
-
-To install the needed Python modules:
-
-In the Windows command prompt, you can type `pip install youtube-dl`, `pip install tweepy`, `pip install tld`, `pip install wget`
+To install the needed Python modules: In the Windows command prompt, you can type `pip install youtube-dl`, `pip install tweepy`, `pip install tld`, `pip install pyppeteer`, `pip install wget`
 
 
 # HOW TO RUN
@@ -57,12 +41,6 @@ If you really want to monitor and mess with this program, I recommend loading th
 If you're still having troubles after reading all of that, use problem solving skills, or create an issue or something.
 
 Suggestions on improvements are very much welcome. Happy hoarding!
-
-
-
-
-
-
 
 
 
