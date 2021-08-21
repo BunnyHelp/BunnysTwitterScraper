@@ -5,9 +5,26 @@ from tld import get_tld
 import time
 from datetime import datetime
 import wget
+import asyncio
+from pyppeteer import launch
 
 
 ydl_opts = {}
+
+
+async def get_page():
+    browser = await launch()
+    page = await browser.newPage()
+    await page.setViewport({
+        "width": 1200,
+        "height": 4000,
+        "deviceScaleFactor": 1.5
+    })
+    await page.goto(URL)
+    # hopefully 3500 milliseconds is enough for the tweet and its replies to load
+    await page.waitFor(3500)
+    await page.screenshot({'path': 'screenshot.png'})
+    await browser.close()
 
 # auth.set_access_token(access_key, access_secret)
 
@@ -34,10 +51,10 @@ for thisURL in URLList:
         ids = URL[URL.rfind("=") + 1:]
     elif domain == 'twitter':
         # It seems we are downloading a Twitter page, so lets initialize the API
-        consumer_key = ""
-        consumer_secret = ""
-        access_key = ""
-        access_secret = ""
+        consumer_key = "1coBY8yryYCduXr9Z5lDy7jwa"
+        consumer_secret = "C8xZmhPrn92jaIONBFKi730LUW5RYvsRb5qu4bwYz5ts0Sya1T"
+        access_key = "3012945954-uGbZmM5gv0Y5upx7gVdgCkdGdUvnyx8UjvSaxMl"
+        access_secret = "3012945954-uGbZmM5gv0Y5upx7gVdgCkdGdUvnyx8UjvSaxMl"
         auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
         api = tweepy.API(auth)
 
@@ -65,7 +82,7 @@ for thisURL in URLList:
         'subtitleslangs': 'en',
         'writeautomaticsub': True,
         'subtitlesformat': 'srt',
-        'merge_output_format': 'mkv'
+        'merge_output_format': 'mkv',
     }
 
     # Adding an output template to the ydl_opts dictionary according to the domain we're attempting to scrape
@@ -79,21 +96,18 @@ for thisURL in URLList:
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([str(URL)])
 
+
     def get_screenshot(screenshot_directory):
         try:
             print("Getting screenshot...")
-            # Writing the current URL to a file that NodeJS / Puppeteer can read to pull a screenshot from.
-            send_URL = open('temp.txt', 'a')
-            send_URL.write(URL)
-            send_URL.close()
-            string = " \"C:\Program Files\\nodejs\\node.exe\" screenshot.js"
-            os.system(string)  # Sending the command to NodeJS to run the script for Puppeteer.
+
+            asyncio.get_event_loop().run_until_complete(get_page())
+
             time_now = str(datetime.now()).replace('.', " ").replace(":", "_")
             os.rename('screenshot.png', screenshot_directory + '/' + time_now + ' screenshot.png')
             print("Screenshot success.")
-            os.remove("temp.txt")  # Cleanup that URL file
         except FileExistsError:
-            print("Somehow, this screenshot already exists.")
+            print("Somehow, screenshot.png already exists.")
             pass
 
 
