@@ -12,7 +12,7 @@ This is intended for Windows. Good luck with other platforms.
 
 If you don't have a Twitter developer account / API keys, you'll need to sign up for one at https://developer.twitter.com/en/apply-for-access in order to access the API, which you need to use this program. Once you have your account, create an app (you don't need to be super serious), and you should have gotten a couple API keys. Hooray! 
 
-EDIT THESE API KEYS INTO THE EMPTY STRINGS IN THE .py FILE.
+EDIT THESE API KEYS INTO THE .py FILE - the keys in there don't work.
 
 
 # INSTALLATION
